@@ -299,206 +299,209 @@ class _speakerState extends State<speaker> {
                     child: Padding(
                       padding:
                           const EdgeInsets.only(top: 50, left: 30, right: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "Gender",
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w900),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                height: 45,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xffbda240),
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Center(
-                                    child: Text(
-                                  "Men",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                )),
-                              ),
-                              Container(
-                                height: 45,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 230, 229, 229),
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Center(
-                                    child: Text(
-                                  "Women",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                )),
-                              ),
-                              Container(
-                                height: 45,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 230, 229, 229),
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Center(
-                                    child: Text(
-                                  "Both",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                )),
-                              )
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            height: 1,
-                            color: const Color.fromARGB(255, 233, 232, 232),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          const Text(
-                            "Price Rate",
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w900),
-                          ),
-                          Image.asset('assets/bottomsheetimag.png'),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            height: 1,
-                            color: const Color.fromARGB(255, 233, 232, 232),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          const Text(
-                            "Color",
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w900),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color: const Color(0xffbda240),
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Icon(Icons.check),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 246, 159, 188),
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 12, 102, 176),
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                    color: Colors.grey,
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 50, bottom: 20),
-                            child: Row(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "Gender",
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.w900),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                SizedBox(
-                                  width: 230,
-                                  height: 55,
-                                  child: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              const Color(0xffbda240),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          )),
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const spekraddtocart()));
-                                      },
-                                      child: const Center(
-                                        child: Text(
-                                          'APPLY FILTERS (4)',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.white),
-                                        ),
-                                      )),
+                                Container(
+                                  height: 45,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xffbda240),
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: const Center(
+                                      child: Text(
+                                    "Men",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )),
                                 ),
-                                const SizedBox(
-                                  width: 20,
+                                Container(
+                                  height: 45,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 230, 229, 229),
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: const Center(
+                                      child: Text(
+                                    "Women",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )),
                                 ),
-                                SizedBox(
-                                  width: 122,
+                                Container(
+                                  height: 45,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 230, 229, 229),
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: const Center(
+                                      child: Text(
+                                    "Both",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )),
+                                )
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              height: 1,
+                              color: const Color.fromARGB(255, 233, 232, 232),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Text(
+                              "Price Rate",
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.w900),
+                            ),
+                            Image.asset('assets/bottomsheetimag.png'),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              height: 1,
+                              color: const Color.fromARGB(255, 233, 232, 232),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Text(
+                              "Color",
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.w900),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
                                   height: 55,
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color: const Color.fromARGB(
-                                              255, 236, 235, 235),
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: const Center(
-                                        child: Text(
-                                          'RESET',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.white),
-                                        ),
-                                      )),
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xffbda240),
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: const Icon(Icons.check),
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 246, 159, 188),
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 12, 102, 176),
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: 55,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(10)),
                                 ),
                               ],
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 50, bottom: 20),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 230,
+                                    height: 55,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            backgroundColor:
+                                                const Color(0xffbda240),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            )),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const spekraddtocart()));
+                                        },
+                                        child: const Center(
+                                          child: Text(
+                                            'APPLY FILTERS (4)',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white),
+                                          ),
+                                        )),
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  SizedBox(
+                                    width: 122,
+                                    height: 55,
+                                    child: Container(
+                                        decoration: BoxDecoration(
+                                            color: const Color.fromARGB(
+                                                255, 236, 235, 235),
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        child: const Center(
+                                          child: Text(
+                                            'RESET',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white),
+                                          ),
+                                        )),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ));
