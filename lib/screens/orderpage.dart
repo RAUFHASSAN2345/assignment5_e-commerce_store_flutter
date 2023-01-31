@@ -8,17 +8,21 @@ class orderpag extends StatefulWidget {
 }
 
 class _orderpagState extends State<orderpag> {
-  var count = 0;
+  var count = 1;
   sub() {
-    setState(() {
-      count--;
-    });
+    if (count > 1) {
+      setState(() {
+        count--;
+      });
+    }
   }
 
   add() {
-    setState(() {
-      count++;
-    });
+    if (count < 5) {
+      setState(() {
+        count++;
+      });
+    }
   }
 
   @override
@@ -120,9 +124,11 @@ class _orderpagState extends State<orderpag> {
                           onTap: () {
                             sub();
                           },
-                          child: const Text(
-                            '-',
-                            style: TextStyle(fontSize: 55),
+                          child: Container(
+                            child: const Text(
+                              '-',
+                              style: TextStyle(fontSize: 55),
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -143,9 +149,11 @@ class _orderpagState extends State<orderpag> {
                           onTap: () {
                             add();
                           },
-                          child: const Text(
-                            '+',
-                            style: TextStyle(fontSize: 30),
+                          child: Container(
+                            child: const Text(
+                              '+',
+                              style: TextStyle(fontSize: 30),
+                            ),
                           ),
                         ),
                       ])

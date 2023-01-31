@@ -42,43 +42,45 @@ class _speakerState extends State<speaker> {
                 ],
               ),
             ),
-            Container(
-              height: 400,
-              width: 400,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  color: const Color.fromARGB(255, 226, 226, 226)),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 5, bottom: 5),
-                child: Column(
-                  children: [
-                    SizedBox(
-                        child: Image.asset(
-                      'assets/homeimag1.png',
-                      fit: BoxFit.fill,
-                      height: 300,
-                    )),
-                    const Text(
-                      "Beosound Balance",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
+            SingleChildScrollView(
+              child: Container(
+                height: 400,
+                width: 400,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    color: const Color.fromARGB(255, 226, 226, 226)),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 5, bottom: 5),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                          child: Image.asset(
+                        'assets/homeimag1.png',
+                        fit: BoxFit.fill,
+                        height: 300,
+                      )),
+                      const Text(
+                        "Beosound Balance",
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      "Inovative,wireless home speaker",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 129, 129, 129),
-                          fontSize: 17),
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        "Inovative,wireless home speaker",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 129, 129, 129),
+                            fontSize: 17),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             Expanded(
