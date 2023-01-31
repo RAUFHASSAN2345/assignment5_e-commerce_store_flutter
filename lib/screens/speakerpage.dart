@@ -42,41 +42,39 @@ class _speakerState extends State<speaker> {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              child: Container(
-                height: 400,
-                width: 400,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(35),
-                    color: const Color.fromARGB(255, 226, 226, 226)),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 5),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                          child: Image.asset(
-                        'assets/homeimag1.png',
-                        fit: BoxFit.fill,
-                        height: 300,
-                      )),
-                      const Text(
-                        "Beosound Balance",
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w900,
-                        ),
+            Container(
+              height: 400,
+              width: 400,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(35),
+                  color: const Color.fromARGB(255, 226, 226, 226)),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 5, bottom: 5),
+                child: Column(
+                  children: [
+                    SizedBox(
+                        child: Image.asset(
+                      'assets/homeimag1.png',
+                      fit: BoxFit.fill,
+                      height: 300,
+                    )),
+                    const Text(
+                      "Beosound Balance",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w900,
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        "Inovative,wireless home speaker",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 129, 129, 129),
-                            fontSize: 17),
-                      ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Text(
+                      "Inovative,wireless home speaker",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 129, 129, 129),
+                          fontSize: 17),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -84,201 +82,195 @@ class _speakerState extends State<speaker> {
               height: 20,
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: 1,
-                itemBuilder: (context, index) {
-                  return Column(children: [
-                    Container(
-                      height: 150,
-                      width: 360,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 226, 226),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          Image.asset('assets/homeimag3.png'),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                "Beosound1",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
+              child: SingleChildScrollView(
+                child: Column(children: [
+                  Container(
+                    height: 150,
+                    width: 360,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 226, 226, 226),
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/homeimag3.png'),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Beosound1",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
                               ),
-                              const SizedBox(
-                                height: 10,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text('$sound1'),
+                                RatingBar.builder(
+                                    initialRating: 0,
+                                    unratedColor: Colors.grey,
+                                    itemCount: 5,
+                                    itemSize: 20,
+                                    itemPadding: const EdgeInsets.symmetric(
+                                        horizontal: 4),
+                                    updateOnDrag: true,
+                                    itemBuilder: (context, index) => const Icon(
+                                          Icons.star,
+                                          color: Color(0xffbda240),
+                                        ),
+                                    onRatingUpdate: (i) {
+                                      setState(() {
+                                        sound1 = i;
+                                      });
+                                    }),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            const Text(
+                              "\$1,600",
+                              style: TextStyle(
+                                fontSize: 18,
                               ),
-                              Row(
-                                children: [
-                                  Text('$sound1'),
-                                  RatingBar.builder(
-                                      initialRating: 0,
-                                      unratedColor: Colors.grey,
-                                      itemCount: 5,
-                                      itemSize: 20,
-                                      itemPadding: const EdgeInsets.symmetric(
-                                          horizontal: 4),
-                                      updateOnDrag: true,
-                                      itemBuilder: (context, index) =>
-                                          const Icon(
-                                            Icons.star,
-                                            color: Color(0xffbda240),
-                                          ),
-                                      onRatingUpdate: (i) {
-                                        setState(() {
-                                          sound1 = i;
-                                        });
-                                      }),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 15,
-                              ),
-                              const Text(
-                                "\$1,600",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
-                    const SizedBox(
-                      height: 30,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    height: 150,
+                    width: 360,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 226, 226, 226),
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, right: 10),
+                          child: Image.asset('assets/homeimag5.png'),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Beoplay A9",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text('$sound2'),
+                                RatingBar.builder(
+                                    initialRating: 0,
+                                    unratedColor: Colors.grey,
+                                    itemCount: 5,
+                                    itemSize: 20,
+                                    itemPadding: const EdgeInsets.symmetric(
+                                        horizontal: 4),
+                                    updateOnDrag: true,
+                                    itemBuilder: (context, index) => const Icon(
+                                          Icons.star,
+                                          color: Color(0xffbda240),
+                                        ),
+                                    onRatingUpdate: (i) {
+                                      setState(() {
+                                        sound2 = i;
+                                      });
+                                    }),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            const Text(
+                              "\$1,600",
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
-                    Container(
-                      height: 150,
-                      width: 360,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 226, 226),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 10),
-                            child: Image.asset('assets/homeimag5.png'),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                "Beoplay A9",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    height: 150,
+                    width: 360,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 226, 226, 226),
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/homeimag4.png'),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Beolit17",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
                               ),
-                              const SizedBox(
-                                height: 10,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text('$sound3'),
+                                RatingBar.builder(
+                                    initialRating: 0,
+                                    unratedColor: Colors.grey,
+                                    itemCount: 5,
+                                    itemSize: 20,
+                                    itemPadding: const EdgeInsets.symmetric(
+                                        horizontal: 4),
+                                    updateOnDrag: true,
+                                    itemBuilder: (context, index) => const Icon(
+                                          Icons.star,
+                                          color: Color(0xffbda240),
+                                        ),
+                                    onRatingUpdate: (i) {
+                                      setState(() {
+                                        sound3 = i;
+                                      });
+                                    }),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            const Text(
+                              "\$1000",
+                              style: TextStyle(
+                                fontSize: 18,
                               ),
-                              Row(
-                                children: [
-                                  Text('$sound2'),
-                                  RatingBar.builder(
-                                      initialRating: 0,
-                                      unratedColor: Colors.grey,
-                                      itemCount: 5,
-                                      itemSize: 20,
-                                      itemPadding: const EdgeInsets.symmetric(
-                                          horizontal: 4),
-                                      updateOnDrag: true,
-                                      itemBuilder: (context, index) =>
-                                          const Icon(
-                                            Icons.star,
-                                            color: Color(0xffbda240),
-                                          ),
-                                      onRatingUpdate: (i) {
-                                        setState(() {
-                                          sound2 = i;
-                                        });
-                                      }),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 15,
-                              ),
-                              const Text(
-                                "\$1,600",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      height: 150,
-                      width: 360,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 226, 226, 226),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          Image.asset('assets/homeimag4.png'),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                "Beolit17",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                children: [
-                                  Text('$sound3'),
-                                  RatingBar.builder(
-                                      initialRating: 0,
-                                      unratedColor: Colors.grey,
-                                      itemCount: 5,
-                                      itemSize: 20,
-                                      itemPadding: const EdgeInsets.symmetric(
-                                          horizontal: 4),
-                                      updateOnDrag: true,
-                                      itemBuilder: (context, index) =>
-                                          const Icon(
-                                            Icons.star,
-                                            color: Color(0xffbda240),
-                                          ),
-                                      onRatingUpdate: (i) {
-                                        setState(() {
-                                          sound3 = i;
-                                        });
-                                      }),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 15,
-                              ),
-                              const Text(
-                                "\$1000",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ]);
-                },
+                  ),
+                ]),
               ),
             )
           ],
